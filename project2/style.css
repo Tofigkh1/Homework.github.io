@@ -1,0 +1,35 @@
+.header1{
+    border-bottom: 1px solid #e7e7e7;
+    
+}
+
+.div1{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.div2{
+    display: flex;
+    margin-left: 500px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.request{
+    color: #71A894;
+}
+
+.img1{
+    margin-left: 31px;
+}
+
+.sec1{
+    display: flex;
+    padding: 46px 32px;
+}
+.div1,.img1{
+    flex-grow: 1;
+}

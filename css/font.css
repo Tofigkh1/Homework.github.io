@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Mykapital;
+    src: url(../Source_Sans_3/static/SourceSans3-Light.ttf)}
+
+@font-face {
+        font-family: Mykapital2;
+        src: url(../Source_Sans_3/static/SourceSans3-Regular.ttf)
+    }
+
+    @font-face {
+        font-family: Mykapital3;
+        src: url(../source-sans-pro/SourceSansPro-Light.otf)
+    }  

@@ -1,0 +1,107 @@
+@import url("reset.css");
+@import url("./veriable.css");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fontRoboto);
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+    height: 107px;
+    border-bottom: 1px solid var(--gray10);
+
+}
+
+.logo1{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navlist{
+    display: flex;
+    gap: 40px;
+}
+
+.nava{
+    color: var(--textBlack);
+    font-weight: 500;
+}
+
+.navli:last-child .nava{
+    font-weight: 800;
+    color: var(--mainGreen);
+}
+
+.logotext{
+    font-size: 32px;
+    font-family: var(--fontOpenSans);
+    color: var(--textBlack);
+    font-weight: 700;
+    letter-spacing: -1.28px;
+}
+
+.sec1{
+    display: flex;
+    align-items: center;
+    padding: 46px 32px;
+}
+
+.h1{
+    color: var(--textBlack);
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 80px;
+    gap: 37;
+}
+
+.p1{
+    color: var(--gray20);
+    font-family: var(--fontOpenSans);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+}
+
+.div1,
+.img1 {
+    width: 50%;
+}
+
+.img1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.btn1{
+    padding: 20px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--mainWhite);
+    border-radius: 8px;
+    background-color: var(--mainGreen);
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn1:hover{
+    opacity: 0.7;
+}
+
+.div1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.sec2{
+    
+}
