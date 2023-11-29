@@ -369,20 +369,23 @@
 //     document.querySelector("#showdate").innerHTML = `bu tarixe ${result} gun qaldi`
 // });
 
-function my(){
-const date = new Date();
-let hourse = date.getHours();
-let minutes = date.minutes;
-if(hourse < 10){
-    hourse = "0" + hourse;
-}
-return document.querySelector("#Timee").innerHTML =
-hourse + ":" + date.getMinutes();
-}
-my();
+// function my(){
+// const date = new Date();
+// let hourse = date.getHours();
+// let minutes = date.minutes;
+// if(hourse < 10){
+//     hourse = "0" + hourse;
+// }
+// return document.querySelector("#Timee").innerHTML =
+// hourse + ":" + date.getMinutes();
+// }
+// my();
 
 // document.querySelector("#Timee").innerHTML =
 // my(); + ":" + date.getMinutes();
+
+
+
 
 
 

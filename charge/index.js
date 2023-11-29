@@ -41,7 +41,7 @@ function initBattery(){
             batteryLiquid.classList.add("gradient-color-green");
             batteryLiquid.classList.remove("gradient-color-red",
             "gradient-color-orange", "gradient-color-yellow");
-           };
+           }
 
         }
         updateBattery();
@@ -53,7 +53,7 @@ function initBattery(){
 function my(){
    const date = new Date();
    let hourse = date.getHours();
-   let minutes = date.minutes;
+   let minutes = date.getMinutes;
    if(hourse < 10){
        hourse = "0" + hourse;
    }
