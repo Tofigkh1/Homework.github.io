@@ -280,48 +280,113 @@
 
 
 
-let expandingarray = ["ASUS", "HP", 55, 77, "LENOVA", 800];
+// let expandingarray = ["ASUS", "HP", 55, 77, "LENOVA", 800];
 
 
-const try4 = {
-    Company: "MSI",
-    Model: 50678,
-    ModelGUI: "Command-Line Interface",
-    ReleaseYear: 1989,
-    btyeprocessingspeed: 1044,
+// const try4 = {
+//     Company: "MSI",
+//     Model: 50678,
+//     ModelGUI: "Command-Line Interface",
+//     ReleaseYear: 1989,
+//     btyeprocessingspeed: 1044,
 
-    monitor: function(){
-        console.log(`marka: ${this.Company}, Model ${this.Model}, ModelGUI: ${this.ModelGUI}, ReleaseYear: ${this.ReleaseYear}, btyeprocessingspeed: ${this.btyeprocessingspeed}`);
-    },
+//     monitor: function(){
+//         console.log(`marka: ${this.Company}, Model ${this.Model}, ModelGUI: ${this.ModelGUI}, ReleaseYear: ${this.ReleaseYear}, btyeprocessingspeed: ${this.btyeprocessingspeed}`);
+//     },
 
-    dataoperations: function(a = 0){
-        this.btyeprocessingspeed += 300;
-        console.log("dataoperations", this.btyeprocessingspeed);
-    },
+//     dataoperations: function(a = 0){
+//         this.btyeprocessingspeed += 300;
+//         console.log("dataoperations", this.btyeprocessingspeed);
+//     },
 
-    btyeprocessings: function(){
+//     btyeprocessings: function(){
 
-        if(this.btyeprocessingspeed >2044){
-            console.log(`Unfortunately,${this.btyeprocessingspeed} there is not enough space in your byte!`);
-        }else if(this.btyeprocessingspeed <2044){
-            console.log("There is enough space in your byte");
+//         if(this.btyeprocessingspeed >2044){
+//             console.log(`Unfortunately,${this.btyeprocessingspeed} there is not enough space in your byte!`);
+//         }else if(this.btyeprocessingspeed <2044){
+//             console.log("There is enough space in your byte");
 
-        }
-    },
+//         }
+//     },
 
 
-};
+// };
 
-try4.monitor()
-try4.dataoperations();
-try4.btyeprocessings();
-try4.dataoperations();
-try4.btyeprocessings();
-try4.dataoperations();
-try4.btyeprocessings();
-try4.dataoperations();
-try4.btyeprocessings();
-try4.dataoperations();
-try4.btyeprocessings();
+// try4.monitor()
+// try4.dataoperations();
+// try4.btyeprocessings();
+// try4.dataoperations();
+// try4.btyeprocessings();
+// try4.dataoperations();
+// try4.btyeprocessings();
+// try4.dataoperations();
+// try4.btyeprocessings();
+// try4.dataoperations();
+// try4.btyeprocessings();
+
+
+
+// const a = Date.now();
+
+// const date = new Date();
+// const monthindex = date.getMonth();
+
+// const result = date.getDate();
+// const result = date.getDay();
+// const result = date.getFullYear();
+// const result = date.getHours();
+// const result = date.getMinutes();
+// const result = date.getMonth();
+// const result = date.getVarDate();
+// let month= ["January","February","March","April","May","June","July",
+//             "August","September","October","November","December"];
+// let month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
+
+
+// const countdaydown = (dateformat) =>{
+
+// let crtm = new Date();
+
+// let newtm = new Date(dateformat);
+
+
+// const currentmil = crtm.getTime();
+
+// const featuremil = newtm.getTime();
+
+// const diffmil = Math.floor((featuremil - currentmil) / 1000 / 60 / 60 / 24);
+
+// return diffmil;
+// }
+
+// console.log(countdaydown("2025-06-20"));
+
+
+
+// document.querySelector("#datebtn").addEventListener("click", function(){
+//     const value = document.querySelector("#dateinput").value
+//     const result = countdaydown(value);
+//     document.querySelector("#showdate").innerHTML = `bu tarixe ${result} gun qaldi`
+// });
+
+function my(){
+const date = new Date();
+let hourse = date.getHours();
+let minutes = date.minutes;
+if(hourse < 10){
+    hourse = "0" + hourse;
+}
+return document.querySelector("#Timee").innerHTML =
+hourse + ":" + date.getMinutes();
+}
+my();
+
+// document.querySelector("#Timee").innerHTML =
+// my(); + ":" + date.getMinutes();
+
+
+
+
+
 
 

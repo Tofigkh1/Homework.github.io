@@ -1,11 +1,13 @@
 initBattery();
+my();
 
 function initBattery(){
     const batteryLiquid = document.querySelector(".Bliquid");
     const batteryStatus = document.querySelector(".Bstatus");
     const Bpercentage = document.querySelector(".Bpercentage");
-    navigator.getBattery().then((batt) => {
-        updateBattery = () => {
+    const Bwatch = document.querySelector(".Bwatch");
+    navigator.getBattery().then((batt) =>{
+         updateBattery = () => {
             let level = Math.floor(batt.level * 100);
             Bpercentage.innerHTML = level + "%";
             batteryLiquid.style.height = `${parseInt(batt.level * 100)}
@@ -23,7 +25,6 @@ function initBattery(){
            }else {
               batteryStatus.innerHTML = "";
            }
-
            if(level <=20){
             batteryLiquid.classList.add("gradient-color-red");
             batteryLiquid.classList.remove("gradient-color-green",
@@ -40,11 +41,22 @@ function initBattery(){
             batteryLiquid.classList.add("gradient-color-green");
             batteryLiquid.classList.remove("gradient-color-red",
             "gradient-color-orange", "gradient-color-yellow");
-           }
+           };
+
         }
         updateBattery();
         batt.addEventListener("chargingchange", () => {updateBattery
         () });
         batt.addEventListener("levelchange", () => { updateBattery });
     })
-}
+};
+function my(){
+   const date = new Date();
+   let hourse = date.getHours();
+   let minutes = date.minutes;
+   if(hourse < 10){
+       hourse = "0" + hourse;
+   }
+   return document.querySelector("#Bwatch2").innerHTML =
+   hourse + ":" + date.getMinutes();
+   };
