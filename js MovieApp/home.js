@@ -377,13 +377,135 @@
 //     hourse = "0" + hourse;
 // }
 // return document.querySelector("#Timee").innerHTML =
-// hourse + ":" + date.getMinutes();
+// hourse + ":" + date.getMinutes();ub
 // }
 // my();
 
 // document.querySelector("#Timee").innerHTML =
 // my(); + ":" + date.getMinutes();
 
+// const cardList = document.querySelector("#cardList");
+
+const movieData = {
+  "Search": [
+      {
+          "Title": "The Lego Movie",
+          "Year": "2014",
+          "imdbID": "tt1490017",
+          "Awards": "ASCAP Film and Television Music Awards",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX300.jpg"
+      },
+      {
+          "Title": "The Simpsons Movie",
+          "Year": "2007",
+          "imdbID": "tt0462538",
+          "Awards": "British Comedy Award for Best Comedy Film",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BNjc4NmQyNGUtMDg4NS00ZTZkLWI3ODQtMGJmYThiYjQxNGRiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_SX300.jpg"
+      },
+      {
+          "Title": "El Camino: A Breaking Bad Movie",
+          "Year": "2019",
+          "imdbID": "tt9243946",
+          "Awards": "NAMM Technical Excellence and Creativity Awards",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BNjk4MzVlM2UtZGM0ZC00M2M1LThkMWEtZjUyN2U2ZTc0NmM5XkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_SX300.jpg"
+      },
+      {
+          "Title": "Scary Movie",
+          "Year": "2000",
+          "imdbID": "tt0175142",
+          "Awards": "Nielsen/EDI Gold Reel Awards",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BMGEzZjdjMGQtZmYzZC00N2I4LThiY2QtNWY5ZmQ3M2ExZmM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+      },
+      {
+          "Title": "The Super Mario Bros. Movie",
+          "Year": "2023",
+          "imdbID": "tt6718170",
+          "Awards": "The Game Awards",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BOTJhNzlmNzctNTU5Yy00N2YwLThhMjQtZDM0YjEzN2Y0ZjNhXkEyXkFqcGdeQXVyMTEwMTQ4MzU5._V1_SX300.jpg"
+      },
+      {
+          "Title": "Bee Movie",
+          "Year": "2007",
+          "imdbID": "tt0389790",
+          "Awards": "Kids' Choice Awards, USA",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BMjE1MDYxOTA4MF5BMl5BanBnXkFtZTcwMDE0MDUzMw@@._V1_SX300.jpg"
+      },
+      {
+          "Title": "Scary Movie 2",
+          "Year": "2001",
+          "imdbID": "tt0257106",
+          "Awards": "Bogey Awards, Germany",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BMzQxYjU1OTUtYjRiOC00NDg2LWI4MWUtZGU5YzdkYTcwNTBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+      },
+      {
+          "Title": "The Lego Batman Movie",
+          "Year": "2017",
+          "imdbID": "tt4116284",
+          "Awards": "Critics' Choice Movie Awards",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg"
+      },
+      {
+          "Title": "Scary Movie 3",
+          "Year": "2003",
+          "imdbID": "tt0306047",
+          "Awards": "BMI Film & TV Awards",
+          "Poster": "https://m.media-amazon.com/images/M/MV5BNDE2NTIyMjg2OF5BMl5BanBnXkFtZTYwNDEyMTg3._V1_SX300.jpg"
+      },
+      {
+          "Title": "Interstaller Movie",
+          "Year": "2006",
+          "imdbID": "tt0362120",
+          "Awards": "Academy of Science Fiction, Fantasy & Horror Films, USA",
+          "Poster": "https://static.boxofficeturkiye.com/movie/poster/300x429/94/2011794-191935505.jpg"
+      }
+  ]
+}
+
+const moviMain = document.getElementById('moviMain');
+const search2 = document.getElementById('search2');
+
+moviMain.innerHTML = movieData.Search.map(item =>{
+  return `
+  <div class="movie">
+            <img src="${item.Poster}" alt="">
+            <div class="moviecardinf">
+                <h3>${item.Title}</h3>
+                <div class="overview">
+                    <p>${item.Year}</p>
+                    <p>${item.imdbID}</p>
+                    <p>${item.Awards}</p>
+                </div>
+            </div>
+        </div>
+  `
+}).join('');
+
+
+search2.addEventListener('input', () =>{
+  let movies = movieData.Search.filter((item)=>{
+    if(item.Title.toLocaleLowerCase().includes(search2.value.toLocaleLowerCase()))
+    return item
+  });
+
+
+  moviMain.innerHTML = movies.map(item=>{
+    return `
+    <div class="movie">
+            <img src="${item.Poster}" alt="">
+            <div class="moviecardinf">
+                <h3>${item.Title}</h3>
+                <div class="overview">
+                    <p>${item.Year}</p>
+                    <p>${item.imdbID}</p>
+                    <p>${item.Awards}</p>
+                </div>
+            </div>
+        </div>
+    `
+  }).join('');
+
+
+});
 
 
 

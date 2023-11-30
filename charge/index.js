@@ -50,6 +50,8 @@ function initBattery(){
         batt.addEventListener("levelchange", () => { updateBattery });
     })
 };
+
+
 function my(){
    const date = new Date();
    let hourse = date.getHours();
